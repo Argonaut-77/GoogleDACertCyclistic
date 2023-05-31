@@ -6,7 +6,7 @@ library(scales)
 library(geosphere)
 
 # Set working directory
-setwd("C:/Users/Noahj/Desktop/Google Data Analytics Capstone Project/Week 2/Track 1 Details - Bike Share or Wellness/Case Study 1 - Bike Share/Divvy Bike Trip Data - Cleaned CSV Files")
+setwd("C:/Users/<name>/Desktop/Google Data Analytics Capstone Project/Week 2/Track 1 Details - Bike Share or Wellness/Case Study 1 - Bike Share/Divvy Bike Trip Data - Cleaned CSV Files")
 
 # Read in data
 jan <- read_csv("cleaned-202101-divvy-tripdata.csv")
@@ -348,5 +348,5 @@ total_outlier_rides <- long_trips_2021 %>%
   summarise(number_of_rides = n(), average_duration = mean(ride_duration_min)) %>%
   arrange(desc(number_of_rides))
 
-
+# Export cleaned dataset as single CSV file
 write.csv(all_trips_2021,"cleaned_all_2021_trips.csv", row.names = FALSE)
